@@ -1,0 +1,150 @@
+*{
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+}
+body {
+     background-color: #222;
+     color: #fff;
+     font-family: 'Courier New', Courier, monospace;
+}
+
+.crud {
+     width: 80%;
+     margin: 0 auto;
+     padding: 2rem;
+     text-align: center;
+}
+.crud .head {
+     margin-bottom: 2rem;
+}
+.crud .head p {
+     font-size: 1.5rem;
+     font-weight: 400;
+     text-transform: uppercase;
+}
+input {
+     width: 100%;
+     outline: none;
+     border: none;
+     padding: 11px 4px;
+     margin-bottom: 7px;
+     background-color: #111;
+     color: #fff;
+     border-radius: 5px;
+     cursor: ns-resize;
+     transition: .5s;
+     margin-right: 7px;
+     font-size: 17px;
+     font-family: monospace
+}
+input:focus{
+     transform: scale(1.1);
+     background-color: #000;
+}
+.crud .inputs .numbers {
+     width: 100%;
+     display: flex;
+     margin: 7px 0;
+}
+.crud .inputs .numbers #total{
+     background-color: brown;
+     text-align: center;
+     margin: 9px 0;
+     padding: 8px 7px;
+     width: 61%;
+     border-radius: 4px;
+     transition: .8s;
+
+}
+.crud .inputs .numbers #total::before {
+     content: 'Total:';
+}
+.crud .outputs #search {
+     margin-top: 27px;
+}
+.crud .outputs .btn-search {
+     display: flex;
+}
+.crud .outputs .btn-search > .button {
+     width: 80%;
+     text-transform: capitalize;
+     margin: 10px 17px;
+}
+.button .delete-all {
+     display: none;
+}
+table {
+     width: 100%;
+     text-align: center;
+     overflow: auto;
+}
+table th{
+     text-transform: uppercase;
+     font-family: serif;
+     letter-spacing: 1px;
+     font-weight: 100;
+     background: #8173cf2e;
+     color: #fff;
+     padding: 11px 7px;
+}
+table tbody tr td > .button {
+     width: 90%;
+}
+table tbody tr td > .button:hover {
+     letter-spacing: 0;
+}
+ table, th, td {
+     border: 2px solid #3d3a4e;
+     border-collapse: collapse;
+     padding: 14px 0;
+     margin: 51px 0;
+ }
+.button {
+     width: 100%;
+     position: relative;
+     overflow: hidden;
+     height: 3rem;
+     padding: 0 2rem;
+     border-radius: 1.5rem;
+     background: #3d3a4e;
+     background-size: 400%;
+     margin: 10px 0;
+     color: #fff;
+     font-size: 17px;
+     font-family: cursive;
+     border: none;
+     cursor: pointer;
+     transition: .4s;
+}
+.button:hover {
+     letter-spacing: 2px;
+}
+.button:hover::before {
+     transform: scaleX(1);
+}
+
+.button-content {
+     position: relative;
+     z-index: 1;
+}
+
+.button::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     transform: scaleX(0);
+     transform-origin: 0 50%;
+     width: 100%;
+     height: inherit;
+     border-radius: inherit;
+     background: linear-gradient(82.3deg,
+               rgba(150, 93, 233, 1) 10.8%,
+               rgba(99, 88, 238, 1) 94.3%);
+     transition: all 0.475s;
+}
+.button .button-content img {
+     width: 18px;
+     margin: -2px 0;
+}
