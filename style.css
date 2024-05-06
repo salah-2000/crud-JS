@@ -148,3 +148,19 @@ table tbody tr td > .button:hover {
      width: 18px;
      margin: -2px 0;
 }
+
+@media (max-width:812px) {
+.crud .head p {
+          font-size: 15px;
+          margin-top: 10px;
+     }
+.crud .inputs .numbers {
+     display: block;
+     }
+.crud .outputs .btn-search {
+     display: block;
+     }
+.crud .outputs .btn-search > .button {
+     width: 94%;
+     }
+};
